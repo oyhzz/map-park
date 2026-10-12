@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парк Дружба Народов - История в точках</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcomeScreen">
+        <div class="welcome-content">
+            <h1>Парк «Дружба народов»</h1>
+            <p class="subtitle">Интерактивный путеводитель по истории Ульяновска</p>
+            
+            <div class="welcome-text">
+                <p> Парк Дружбы народов — главный городской парк и лесопарк в центре Ульяновска. Парк строился в качестве символического дара советских республик городу, в котором родился В. И. Ленин, к 100-летию со дня его рождения. Поэтому в советские годы парк Дружбы народов в Ульяновске считался одной из главных достопримечательностей города. Проект парка был разработан архитектором А. Бросманом и утверждён в 1966 году. В строительстве и обустройстве парка принимали участие архитекторы, скульпторы и садовники из 15 союзных республик. В 1969 году парк был официально открыт. После распада Советского Союза финансирование парка сильно сократилось, что привело к его запустению. Многие скульптуры были похищены, большая часть композиций была разрушена и заросла травой и кустарниками. </p>
+                <p> Вы можете прогуляться по виртуальной карте, узнать судьбу каждого памятника: какие из них сохранились до наших дней, а какие были утрачены.</p>
+            </div>
+
+           
+
+            <button class="start-btn" onclick="closeWelcome()">Перейти к карте 🗺️</button>
+        </div>
+        <div class="welcome-overlay"></div>
+    </div>
+    
+    <header>
+        <h1>Парк «Дружба народов»</h1>
+        <p>Интерактивный маршрутный лист. Ульяновск.</p>
+
+        <button class="home-btn" onclick="showWelcome()" title="Вернуться к началу">
+            🏠 Главная
+        </button>
+    </header>
+
+    <main>
+        <div class="map-container" id="parkMap">
+            <img src="assets/images/map.jpg" alt="Карта парка" class="map-image" id="baseMap">
+        </div>
+        
+        <div class="info-panel">
+            <p>Нажми на точку, чтобы узнать судьбу скульптуры.</p>
+        </div>
+    </main>
+
+    <div id="objectDetails" class="hidden">
+        <button class="close-btn" onclick="closeDetails()">❌ Закрыть</button>
+        <h2 id="objTitle"></h2>
+        <div class="status-badge" id="objStatus"></div>
+        
+        <div id="objImageContainer"></div> 
+        
+        <p id="objDesc"></p>
+        <div id="objVideoContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
